@@ -1,0 +1,9 @@
+.cargo/.global-cache
+.cargo/.package-cache
+.cargo/.package-cache-mutate
+.cargo/registry/
+.direnv/
+result
+result/
+target/
+vendor/

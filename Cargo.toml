@@ -1,0 +1,22 @@
+[package]
+name = "git-hooks"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "git_hooks"
+path = "src/lib.rs"
+
+[[bin]]
+name = "commit-msg-hook"
+path = "src/main.rs"
+
+[dev-dependencies]
+proptest = "1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"

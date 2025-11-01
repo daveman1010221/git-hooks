@@ -69,7 +69,7 @@
             mkdir -p $out/bin
             cp target/release/commit-msg-hook $out/bin/commit-msg
             ${pkgs.binutils}/bin/strip --strip-all $out/bin/commit-msg || true
-            chmod 777 $out/bin/commit-msg
+            chmod -R 0775 $out/bin/
           '';
         };
       });
